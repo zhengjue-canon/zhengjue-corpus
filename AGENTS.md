@@ -1,5 +1,8 @@
-# AGENTS.md — `zhengjue-corpus` 语料与账本守恒规范
+# AGENTS.md — `zhengjue-corpus` 语料、账本守恒与版权合规规范 (v3.2)
 
-1. **严禁手改 `*.cbeta.json`**：`*.cbeta.json` 只能由 `cbeta-markdown compile-baseline` 生成。
-2. **严禁脱离账本直接手改 `*.md`**：对经文句读、底本错字订正、分段或 8 种字型的任何修改，必须写入 `*.changes.jsonl` 并通过 `cbeta-md project` 重放生成 `*.md` 与 `*.standoff.json`。
-3. **修改意见长文规范**：所有关联至 `ChangeRecord` 的完整 Markdown 专文统一存放于同目录下的 `articles/ART-<sutraId>-<fascicle>-<seq>.md`，支持独立递增 `revision` 版本。
+1. **法律合规准入铁律（详见 `../zhengjue-docs/02-domain-specs/REQ-08-legal-and-compliance.md`）** ★ 最高红线：
+   - **严禁未过版权保护期文献全文入库**：作者或译者逝世未满 70 年之近现代著作/译本（如法尊汉译《广论》、印顺著作、《大藏经补编》现代著作等）严禁在 `canons/` 下存放整卷/整书原文！此类文献仅允许在 `articles/ART-*.md` 辨正专文中依法定“合理使用（适当引用）”短句引述（单篇引用同一作品累计 ≤ 300 字且必须注明完整出处）。
+   - **底本公有领域纯净性**：`*.cbeta.json` 基准快照仅保存 100% 公共领域的古籍纯汉字、1924 年《大正藏》原版行号、原版古句读与原版宋元明丽校勘记；《正觉藏》公开的 `*.md` 新式句读必须 100% 来自 `*.changes.jsonl` 中经由正觉初标与平实导师审定的独立成果。
+   - **义工授权绑定**：每一条 `ChangeRecord` 与每一篇 `ART-*.md` 必须绑定已签署《著作权归属暨永久不可撤销公益流通授权协议》的作者 `agreementId`。
+2. **严禁手改 `*.cbeta.json` 与 `*.md`**：所有对经文句读、底本错字订正、分段或 8 种字型的修改，必须写入 `*.changes.jsonl` 并通过 `cbeta-md project` 重放生成 `*.md` 与 `*.standoff.json`。
+3. **三级发版冻结规范（详见 `REQ-07`）**：公开发版通过 `releases/REL-vX.Y.Z.json` 锁定已达 `FINAL_APPROVED` 的经卷快照，未终审经卷严禁进入公开发版包。
