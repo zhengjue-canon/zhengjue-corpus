@@ -1,0 +1,15 @@
+# 伪佛法部 (PSEUDO_BUDDHIST) — 与正法藏严格隔离、挂载一对一辨正评论文章与段落法位拣择
+tier: PSEUDO_BUDDHIST
+zhName: 伪佛法部
+isolatedFromDefaultSearch: true
+entries:
+  - sutraId: T18n0848
+    title: 大毗盧遮那成佛神變加持經（大日經）
+    fascicleCount: 7
+    refutationAuthor: 游正光老師等
+    refutationMode: ONE_TO_ONE_ARTICLE_AND_SCRAPBOOK_SPLICING_ANALYSIS
+  - sutraId: T18n0865
+    title: 金剛頂一切如來真實攝大乘現證大教王經（金剛頂經）
+    fascicleCount: 3
+    refutationAuthor: 游正光老師等
+    refutationMode: ONE_TO_ONE_ARTICLE_AND_SCRAPBOOK_SPLICING_ANALYSIS

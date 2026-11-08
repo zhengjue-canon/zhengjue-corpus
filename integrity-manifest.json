@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "3.0.0",
+  "generatedAt": "2026-11-08T19:45:00+08:00",
+  "fascicles": {
+    "T31n1585_001": {
+      "canonTier": "ORTHODOX_CANON",
+      "baselinePath": "canons/orthodox/T31n1585/001.cbeta.json",
+      "changesPath": "canons/orthodox/T31n1585/001.changes.jsonl",
+      "canonicalMdPath": "canons/orthodox/T31n1585/001.md",
+      "standoffPath": "canons/orthodox/T31n1585/001.standoff.json",
+      "l1CharStreamSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replayInvariantVerified": true,
+      "changeCount": 2,
+      "articleCount": 1
+    }
+  }
+}

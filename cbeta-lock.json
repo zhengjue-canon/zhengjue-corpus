@@ -1,0 +1,7 @@
+{
+  "upstreamRepo": "https://github.com/cbeta-org/xml-p5a",
+  "upstreamRelease": "2025.Q4",
+  "lockedAt": "2026-11-08T19:45:00+08:00",
+  "compilerVersion": "cbeta-markdown@0.1.0",
+  "expungedCollections": ["B"]
+}

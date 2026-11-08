@@ -1,0 +1,13 @@
+# 正觉法宝部 (ZHENGJUE_TREASURY) — 平实导师全部讲经讲义、论释与法义辨正专著目录
+tier: ZHENGJUE_TREASURY
+zhName: 正觉法宝部
+requires8FontTypography: true
+entries:
+  - workId: ZJ-CWSSL-001
+    title: 成唯識論釋
+    author: 平實導師（蕭平實）
+    structure: ["經論本文", "白話語譯", "義理解釋", "科判與判教提示（持業釋/依士釋等）"]
+  - workId: ZJ-PSYL-001
+    title: 菩薩瓔珞本業經講義
+    author: 平實導師（蕭平實）
+    volumes: 8

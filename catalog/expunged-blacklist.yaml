@@ -1,0 +1,14 @@
+# 彻底剔除黑名单 (EXPUNGED_BLACKLIST) — 构建与导入期硬拦截剔除
+tier: EXPUNGED_BLACKLIST
+zhName: 彻底剔除黑名单
+reason: "依据《正觉电子报》常设声明〈严正抗议 CBETA 收录外道典籍于电子佛典中〉及平实导师112年度会员大会开示，剔除《大藏经补编》混入之宗喀巴13部喇嘛教外道著作及现代六识论著作。"
+expungedRules:
+  - prefix: "B10n0050"
+    title: "菩提道次第廣論（宗喀巴著）"
+  - prefix: "B10n0051"
+    title: "密宗道次第廣論（宗喀巴著）"
+  - prefix: "B10n0052"
+    title: "菩提道次第略論（宗喀巴著）"
+  - prefix: "B"
+    authorFilter: ["宗喀巴", "印順"]
+    action: "HARD_REJECT_AT_INGEST"

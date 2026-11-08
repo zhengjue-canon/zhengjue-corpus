@@ -1,0 +1,11 @@
+# 部派论典待辨正部 (SECTARIAN_REVIEWED) — 锁定原文不改、采用类电脑档案注解功能划词批注辨正
+tier: SECTARIAN_REVIEWED
+zhName: 部派论典待辨正部
+allowTextEmendation: false
+annotationMode: INLINE_COMMENT_CRITIQUE
+entries:
+  - sutraId: T27n1545
+    title: 阿毘達磨大毘婆沙論
+    fascicleCount: 200
+    translatorOrAuthor: 五百大阿羅漢等造 / 三藏法師玄奘奉詔譯
+    critiqueNote: "部派佛教声闻凡夫论师所造，多处落入六识论与断常二见；依平实导师115年度会员大会指示，不改原文，以电脑档案注解方式逐段标示其原意与法义过失。"
