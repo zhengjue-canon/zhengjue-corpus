@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "3.0.0",
+  "fascicleId": "T31n1585_001",
+  "baselineRef": "./001.cbeta.json",
+  "changeLedgerRef": "./001.changes.jsonl",
+  "replayInvariant": {
+    "verified": true,
+    "baselineSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changeCount": 2,
+    "linkedArticleCount": 1
+  },
+  "lineMilestones": [
+    { "pb": "0001a", "lb": "0001a08", "charOffset": 0 },
+    { "pb": "0001a", "lb": "0001a12", "charOffset": 24 },
+    { "pb": "0001b", "lb": "0001b14", "charOffset": 212 }
+  ],
+  "typographySpans": [
+    { "spanId": "TYPO-001", "charStart": 0, "charEnd": 24, "blockRole": "GATHA_VERSE", "inlineRole": null },
+    { "spanId": "TYPO-002", "charStart": 24, "charEnd": 178, "blockRole": "SASTRA_PROSE", "inlineRole": null },
+    { "spanId": "TYPO-003", "charStart": 178, "charEnd": 202, "blockRole": "INTERROGATION", "inlineRole": null },
+    { "spanId": "TYPO-004", "charStart": 202, "charEnd": 212, "blockRole": "SASTRA_PROSE", "inlineRole": null },
+    { "spanId": "TYPO-005", "charStart": 212, "charEnd": 248, "blockRole": "GATHA_VERSE", "inlineRole": "DOCTRINAL_PROMPT" }
+  ],
+  "changeProvenanceAnchors": [
+    {
+      "changeId": "CHG-T31n1585-001-0001",
+      "changeType": "PUNCTUATION",
+      "charStart": 0,
+      "charEnd": 24,
+      "createdBy": "張居士（破參初標同修）",
+      "finalApprovedBy": "平實導師",
+      "linkedArticleIds": []
+    },
+    {
+      "changeId": "CHG-T31n1585-001-0002",
+      "changeType": "PUNCTUATION",
+      "charStart": 212,
+      "charEnd": 248,
+      "createdBy": "張居士（破參初標同修）",
+      "finalApprovedBy": "平實導師",
+      "linkedArticleIds": ["ART-T31n1585-001-0001"]
+    }
+  ]
+}
