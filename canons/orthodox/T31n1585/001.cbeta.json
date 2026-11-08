@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "3.0.0",
+  "fascicleId": "T31n1585_001",
+  "sutraId": "T31n1585",
+  "title": "成唯識論卷第一",
+  "canonTier": "ORTHODOX_CANON",
+  "upstreamCbetaCommit": "cbeta-xml-p5a@2025.Q4",
+  "sourceXmlPath": "T/T31/T31n1585_001.xml",
+  "verification": {
+    "l0AstCoverage": "100%",
+    "l1CharStreamSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "l2MilestonesVerified": true,
+    "l3ApparatusRoundtripVerified": true
+  },
+  "baselineText": "稽首唯識性。滿分清淨者。我今釋彼說。利樂諸有情。今造此論。為於二空有迷謬者生正解故。生解為斷二重障故。由我法執二障具生。若證二空彼障隨斷。斷障為得二勝果故。由斷續生煩惱障故證真解脫。由斷礙解所知障故得大菩提。又為開示謬執我法迷唯識者。令達二空。於唯識理如實知故。復有迷謬唯識理者。或執外境如識非無。或執內識如境非有。或執諸識用別體同。或執離心無別心所。為遮此等種種異執。令於唯識深妙理中得如實解故作斯論。若爾既為遮遣異執。禮讚唯識理應在初。何故先禮滿分淨者。開發敬信有情勝故。由假說我法。有種種相轉。彼依識所變。此能變唯三。謂異熟思量。及了別境識。",
+  "lineMilestones": [
+    { "pb": "0001a", "lb": "0001a08", "charOffset": 0 },
+    { "pb": "0001a", "lb": "0001a12", "charOffset": 24 },
+    { "pb": "0001b", "lb": "0001b14", "charOffset": 212 }
+  ]
+}
