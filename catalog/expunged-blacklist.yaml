@@ -1,14 +1,20 @@
-# 彻底剔除黑名单 (EXPUNGED_BLACKLIST) — 构建与导入期硬拦截剔除
+# 彻底划出黑名单 (EXPUNGED_BLACKLIST) — 构建与导入期整编/整册硬性划出
 tier: EXPUNGED_BLACKLIST
-zhName: 彻底剔除黑名单
-reason: "依据《正觉电子报》常设声明〈严正抗议 CBETA 收录外道典籍于电子佛典中〉及平实导师112年度会员大会开示，剔除《大藏经补编》混入之宗喀巴13部喇嘛教外道著作及现代六识论著作。"
-expungedRules:
-  - prefix: "B10n0050"
-    title: "菩提道次第廣論（宗喀巴著）"
-  - prefix: "B10n0051"
-    title: "密宗道次第廣論（宗喀巴著）"
-  - prefix: "B10n0052"
-    title: "菩提道次第略論（宗喀巴著）"
-  - prefix: "B"
-    authorFilter: ["宗喀巴", "印順"]
-    action: "HARD_REJECT_AT_INGEST"
+zhName: 彻底划出黑名单
+reason: "大藏经（尤其是 CBETA 扩充编）中混入大量晚期、近现代六识论著作（如印顺著作）及藏传（喇嘛教）典籍；《正觉藏》实际修正与编纂聚焦于汉传核心三转法轮真经与菩萨正论，故将其余庞杂外道及近现代部分直接整编划出。"
+expungedCollections:
+  - code: "Y"
+    title: "《印順法師佛學著作集》全編"
+    action: "EXPUNGE_ENTIRE_COLLECTION"
+  - code: "TX"
+    title: "《太虛大師全書》全編"
+    action: "EXPUNGE_ENTIRE_COLLECTION"
+  - code: "B"
+    title: "《大藏經補編》（含宗喀巴《菩提道次第廣論》《密宗道次第廣論》等13部藏傳外道書及近現代著作）"
+    action: "EXPUNGE_ENTIRE_COLLECTION"
+  - code: "T56..T84"
+    title: "《大正藏》日本撰述部（東密/台密及日本各宗私撰）"
+    action: "EXPUNGE_BY_DEFAULT"
+  - code: "TIBETAN_AND_MODERN"
+    title: "其他近現代及藏傳（喇嘛教）相關編目"
+    action: "EXPUNGE_ENTIRE_COLLECTION"
