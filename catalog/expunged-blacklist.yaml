@@ -1,20 +1,70 @@
-# 彻底划出黑名单 (EXPUNGED_BLACKLIST) — 构建与导入期整编/整册硬性划出
-tier: EXPUNGED_BLACKLIST
-zhName: 彻底划出黑名单
-reason: "大藏经（尤其是 CBETA 扩充编）中混入大量晚期、近现代六识论著作（如印顺著作）及藏传（喇嘛教）典籍；《正觉藏》实际修正与编纂聚焦于汉传核心三转法轮真经与菩萨正论，故将其余庞杂外道及近现代部分直接整编划出。"
-expungedCollections:
-  - code: "Y"
-    title: "《印順法師佛學著作集》全編"
-    action: "EXPUNGE_ENTIRE_COLLECTION"
-  - code: "TX"
-    title: "《太虛大師全書》全編"
-    action: "EXPUNGE_ENTIRE_COLLECTION"
-  - code: "B"
-    title: "《大藏經補編》（含宗喀巴《菩提道次第廣論》《密宗道次第廣論》等13部藏傳外道書及近現代著作）"
-    action: "EXPUNGE_ENTIRE_COLLECTION"
-  - code: "T56..T84"
-    title: "《大正藏》日本撰述部（東密/台密及日本各宗私撰）"
-    action: "EXPUNGE_BY_DEFAULT"
-  - code: "TIBETAN_AND_MODERN"
-    title: "其他近現代及藏傳（喇嘛教）相關編目"
-    action: "EXPUNGE_ENTIRE_COLLECTION"
+# 不收录外典与近代讲记部 (UNCOLLECTED_EXTERNAL) — 基于全量 CBETA 底本索引的打标不收录与『破邪显正』反向靶标目录
+tier: UNCOLLECTED_EXTERNAL
+zhName: 不收录外典与近代讲记部（全量 CBETA 纳管打标）
+designPrinciple: >
+  《正觉藏》以 100% 全量 CBETA 语料库为底层坐标与目录底座。
+  对于 CBETA 中绝大多数晚期、藏传（喇嘛教）及近现代文献（如印顺全集、宗喀巴广论、近代法师讲记等），
+  均打上明确分类标签并标记为『不收录入正觉藏正编、不参与重新句读修订』。
+  但其中具有重大『破邪显正』反向价值的靶标文献（UNCOLLECTED_REFUTATION_TARGET），
+  保留其 CBETA 原始册页栏行号与字格坐标（LineTokenId）寻址能力，供审阅老师锚定错误段落、
+  依法定评论性合理使用（≤300字）提取靶标引文并撰写破斥专文（articles/ART-*.md），与正法藏真经正论建立双向对读。
+
+collectionPolicies:
+  - collectionCode: "Y"
+    title: "《印順法師佛學著作集》全編（妙雲集、成佛之道、以佛法研究佛法、中國禪宗史等）"
+    inclusionStatus: "UNCOLLECTED_REFUTATION_TARGET"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_YINSHUN_CORPUS", "TAG_MODERN_ACADEMIC_DOUBT"]
+    defaultFallacyTags: ["FALLACY_SIX_CONSCIOUSNESS", "FALLACY_MAHAYANA_NOT_BUDDHA", "FALLACY_PRASANGIKA_NIHILISM"]
+    policyNote: "打标不收录全文、不参与句读修订；列为一级『破邪显正反向靶标库』，仅在 refutations/Y/*.refutations.jsonl 中锚定错误段落坐标与 ≤300 字合理引用短句并挂载破斥专文。"
+
+  - collectionCode: "B"
+    title: "《大藏經補編》（含宗喀巴《菩提道次第廣論》《密宗道次第廣論》等13部藏密著作及近現代文獻）"
+    inclusionStatus: "UNCOLLECTED_REFUTATION_TARGET"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_TIBETAN_LAMRIM_TANTRA"]
+    defaultFallacyTags: ["FALLACY_PRASANGIKA_NIHILISM", "FALLACY_TANTRIC_KARMAMUDRA", "FALLACY_SIX_CONSCIOUSNESS"]
+    policyNote: "打标不收录全文、不参与句读修订；列为一级『破邪显正反向靶标库』，供锚定应成派中观与双身法邪见段落并关联《狂密与真密》《广论之平议》等辨正专文。"
+
+  - collectionCode: "TX"
+    title: "《太虛大師全書》及近現代六識論相關講記"
+    inclusionStatus: "UNCOLLECTED_REFUTATION_TARGET"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_MODERN_LECTURE", "TAG_MODERN_ACADEMIC_DOUBT"]
+    defaultFallacyTags: ["FALLACY_SIX_CONSCIOUSNESS"]
+    policyNote: "打标不收录全文；对涉及唯识法相与如来藏法义辨析之段落按需建立破邪显正靶标锚点。"
+
+  - collectionCode: "MODERN_MASTERS_LECTURES"
+    title: "CBETA 各編中收錄之近現代法師經論講記與開示錄"
+    inclusionStatus: "UNCOLLECTED_TAGGED_ONLY"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_MODERN_LECTURE"]
+    policyNote: "CBETA 中数量庞大的近代法师讲解，默认统一打标『#近代法师讲记 · 不收录』（UNCOLLECTED_TAGGED_ONLY），不参与句读修订；若某部讲记存在代表性六识论或常见/断见误导，可按单篇经号升级为 UNCOLLECTED_REFUTATION_TARGET 并挂载辨正记录。"
+
+  - collectionCode: "T56..T84"
+    title: "《大正藏》第 56～84 冊日本撰述部（東密/台密及日本各宗私撰）"
+    inclusionStatus: "UNCOLLECTED_TAGGED_ONLY"
+    copyrightClearance: "PUBLIC_DOMAIN"
+    doctrinalTags: ["TAG_JAPANESE_SECTARIAN", "TAG_EASTERN_ESOTERIC"]
+    policyNote: "默认整区打标不收录；仅对极少数具东密/台密破邪显正价值的代表性文献按需挂载靶标批驳。"
+
+representativeTargets:
+  - sutraId: "Y08n0008"
+    title: "成佛之道"
+    author: "印順"
+    inclusionStatus: "UNCOLLECTED_REFUTATION_TARGET"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_YINSHUN_CORPUS"]
+    fallacyTags: ["FALLACY_SIX_CONSCIOUSNESS", "FALLACY_PRASANGIKA_NIHILISM", "FALLACY_MAHAYANA_NOT_BUDDHA"]
+    refutationLedgerPath: "refutations/Y/Y08n0008.refutations.jsonl"
+    uncollectedReason: "以应成派六识论及性空唯名曲解三乘菩提与大乘唯识如来藏妙义，不收录入《正觉藏》，列为破邪显正核心靶标。"
+
+  - sutraId: "B10n0067"
+    title: "菩提道次第廣論"
+    author: "宗喀巴造 / 法尊譯"
+    inclusionStatus: "UNCOLLECTED_REFUTATION_TARGET"
+    copyrightClearance: "PROTECTED_QUOTE_ONLY"
+    doctrinalTags: ["TAG_TIBETAN_LAMRIM_TANTRA"]
+    fallacyTags: ["FALLACY_PRASANGIKA_NIHILISM", "FALLACY_TANTRIC_KARMAMUDRA", "FALLACY_SIX_CONSCIOUSNESS"]
+    refutationLedgerPath: "refutations/B/B10n0067.refutations.jsonl"
+    uncollectedReason: "属藏传喇嘛教应成派中观与无上瑜伽密续道次第论著，非佛法三乘正统，打标不收录，列为破邪显正核心靶标。"
